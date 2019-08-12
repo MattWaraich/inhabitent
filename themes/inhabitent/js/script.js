@@ -1,9 +1,4 @@
-(function(){
-
-$('body').append ('hello world');
-
+(function() {
+  $('body').append('hello world');
 })(jQuery);
-//IIFE: Imediately Invoked Function Expression b/c we can pass in global variable 
-
-
-
+//IIFE: Imediately Invoked Function Expression b/c we can pass in global variable
