@@ -24,7 +24,8 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content' ); ?>
 
 			<?php endwhile; ?>
-
+  
+			<!-- This makes post pagination -->
 			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
