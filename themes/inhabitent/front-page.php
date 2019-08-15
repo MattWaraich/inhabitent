@@ -9,23 +9,34 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-	<?php
-	$args = [
-		'taxonomy' => 'product_type',
-		'hide_empty' => 'true',
-		];
 
-		$terms = get_terms ( $args );
-
-		foreach ( $terms as $term ) {
-
-			$icon = get_template_directory_uri() . '/images/' . $term->slug . '.svg';
+	<section>
+		<h2>Shop Stuff</h2>
+		<div class="shop-terms">
+			<?php
+			$args = [
+				'taxonomy' => 'product-type',
+				'hide_empty' => false,
+			];
+		
+				
+			$terms = get_terms( $args );
 			
-			echo '<img src="' . $icon . '" />';
-			echo $term->name;
-			echo $term->description;
-		 }; 
-		 ?>
+			foreach ( $terms as $term ) {
+
+				$icon = get_template_directory_uri() . '/images/product-type-icons/' . $term->slug . '.svg';
+				
+				echo '<img src="' . $icon . '" />';
+				echo $term->name;
+				echo $term->description;
+				// echo get_term_link($term)
+			}; 
+		
+	
+			?>
+		 </div>
+	</section>
+
 
 <?php 
 $args = array(
