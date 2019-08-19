@@ -240,14 +240,26 @@ textarea {
   line-height: 1.5; }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: Novecento Sans Web, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
 
 /* Copy */
 p {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  font-family: Merriweather Web, serif; }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
   font-style: italic; }
 
 blockquote {
@@ -267,16 +279,21 @@ pre {
   overflow: auto;
   padding: 1.6rem; }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem; }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help; }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none; }
 
@@ -588,7 +605,8 @@ a {
 --------------------------------------------------------------*/
 /* Menus */
 .site-header {
-  position: relative; }
+  position: absolute;
+  width: 100%; }
   .site-header:after {
     position: absolute;
     left: 0;
@@ -677,6 +695,31 @@ a {
       width: 25%; }
     .product-type-blocks .product-each p {
       text-align: center; }
+
+/* JOURNAL ENTRY */
+.journal-entries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .journal-entries .front-page-post-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+    padding: 0.75rem;
+    border-top-width: 5px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .journal-entries .front-page-post-container .front-page-post-thumbnail img {
+      width: 100px; }
 
 /* POSTS & PAGES */
 .sticky {

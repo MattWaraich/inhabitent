@@ -4,7 +4,8 @@
 
 /* Menus */
 .site-header {
-  position: relative;
+  position: absolute;
+  width: 100%;
   // @include flex-items-content;
   &:after {
     position: absolute;
@@ -89,6 +90,27 @@
       text-align: center;
     }
     a {
+    }
+  }
+}
+
+/* JOURNAL ENTRY */
+
+.journal-entries {
+  display: flex;
+  justify-content: space-between;
+  .front-page-post-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0.75rem;
+    border-top-width: 5px;
+    align-items: center;
+    .front-page-post-thumbnail {
+      img {
+        // height: 50%;
+        width: 100px;
+      }
     }
   }
 }

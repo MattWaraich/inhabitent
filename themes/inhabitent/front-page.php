@@ -71,12 +71,14 @@ $args = array(
  $journals = get_posts($args);
 ?>
 
- <?php foreach ($journals as $post) : ?>
+<div class="journal-entries">
+
+	<?php foreach ($journals as $post) : ?>
                        <?php setup_postdata($post); ?>
 
                        <div class='front-page-post-container'>
                            <div class='front-page-post-thumbnail'>
-                               <?php the_post_thumbnail(); ?>
+                               <?php the_post_thumbnail('array(100)'); ?>
                            </div>
 
 
@@ -98,7 +100,8 @@ $args = array(
                                <a href="<?php the_permalink() ?>" rel="bookmark">Read Entry</a>
                            </div>
                        </div>
-				   <?php endforeach; ?>
+				<?php endforeach; ?>
+</div>
 </section>
 				   
 			
