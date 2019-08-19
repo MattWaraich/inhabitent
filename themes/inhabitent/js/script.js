@@ -1,5 +1,19 @@
-(function() {
-  // TODO remove this line of code below
-  $('body').append('hello world');
+(function($) {
+  $('#masthead')
+    .find('.search-submit')
+    .on('click', function() {
+      $(this)
+        .siblings('.search-field')
+        .toggleClass('expand');
+    });
 })(jQuery);
-//IIFE: Imediately Invoked Function Expression b/c we can pass in global variable
+// IIFE
+
+// (function ($) {
+
+
+//   // TODO remove the body append
+//   $('body').append('');
+  
+
+// }) (jQuery);

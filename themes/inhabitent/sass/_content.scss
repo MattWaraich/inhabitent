@@ -1,8 +1,99 @@
 /*--------------------------------------------------------------
-# Content
+# Navigation
 --------------------------------------------------------------*/
 
-/* Posts and pages */
+/* Menus */
+.site-header {
+  position: relative;
+  // @include flex-items-content;
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    content: '';
+    // border-bottom: $border__solid;
+  }
+}
+.main-navigation {
+  // clear: both;
+  header & {
+    height: 3.125rem;
+  }
+  height: 100%;
+  padding: 0.5rem;
+  // font-family: $font__header;
+  text-transform: uppercase;
+  .menu-toggle {
+    display: none;
+  }
+  .site {
+    &-logo {
+      height: 100%;
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/* HERO BANNER */
+.home-hero {
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.4)),
+    #969696 url(../../images/home-hero.jpg) no-repeat top;
+  background-size: cover, cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+/*  SHOP STUFF AREA */
+.home h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 3.75rem;
+  color: #2f1339;
+  font-family: Novecento Sans Web, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.product-type-blocks {
+  display: flex;
+  flex-direction: row;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.75rem;
+  border-top-width: 5px;
+  justify-content: space-between;
+
+  .product-each {
+    width: 23.5%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    border: 1px solid #e1e1e1;
+    border-radius: 0 1rem;
+    padding: 0.75 rem;
+
+    img {
+      width: 25%;
+    }
+    p {
+      text-align: center;
+    }
+    a {
+    }
+  }
+}
+
+/* POSTS & PAGES */
 
 .sticky {
   display: block;
@@ -32,27 +123,39 @@
   margin: 0 0 $base__space-unit;
 }
 
-/* Asides */
+/* Links */
+nav a {
+  color: $color__text-screen;
+  text-decoration: none;
+  &:visited {
+    color: $color__link-visited;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color__link-hover;
+  }
+  &:focus {
+    outline: thin dotted;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+/* ASIDES */
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none;
 }
 
-/* Comments */
+/* COMMENTS */
 
 .comment-content a {
   word-wrap: break-word;
 }
 .bypostauthor {
   display: block;
-}
-
-// Footer
-
-.site-footer {
-  //   background-image: url('../images/dark-wood.png');
-  background-color: aqua;
-  width: 100%;
-  height: 100vh;
 }

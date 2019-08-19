@@ -8,56 +8,101 @@
 get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
-
-	<section>
+		<!-- home hero banner -->
+		<section class="home-hero">
+			<img src="<?php echo get_template_directory_uri();?>/images/logos/inhabitent-logo-full.svg" alt="Inhabitent Logo">
+		</section>
+         <!-- PRODUCTS -->
+	<section class="product-info-container">
 		<h2>Shop Stuff</h2>
-		<div class="shop-terms">
-			<?php
-			$args = [
-				'taxonomy' => 'product-type',
-				'hide_empty' => false,
-			];
-		
-				
-			$terms = get_terms( $args );
-			
-			foreach ( $terms as $term ) {
 
-				$icon = get_template_directory_uri() . '/images/product-type-icons/' . $term->slug . '.svg';
-				
-				echo '<img src="' . $icon . '" />';
-				echo $term->name;
-				echo $term->description;
-				// echo get_term_link($term)
-			}; 
-		
-	
-			?>
-		 </div>
-	</section>
-
-
-<?php 
+		<?php 
 $args = array(
     'post_type'         => 'post',
     'order'             => 'ASC',
 	'posts_per_page'    => '4'
 );
  $query = new WP_Query($args);
+?>
 
- if ( $query->have_posts() ) : ?>
-<?php while ( $query->have_posts() ) : $query->the_post(); ?>
-   <h1><?php the_title(); ?></h1>
-   <?php the_content(); ?>
-<?php endwhile; ?>
-<?php the_posts_navigation(); ?>
-<?php wp_reset_postdata(); ?>
-<?php else : ?>
-   <h2>Nothing found!</h2>
-<?php endif; ?>
+			<div class="product-type-blocks">
+
+				<?php
+					$args = [
+					'taxonomy' => 'product-type',
+					'hide_empty' => true,
+					];
+					$terms = get_terms( $args );
+			
+						foreach ( $terms as $term ) :
+			?>
+
+			<div class="product-each">
+				<?php
+					$icon = get_template_directory_uri() . '/images/product-type-icons/' . $term->slug . '.svg';
+					$name = $term->name;
+					$description = $term->description;
+				?>					
+				<img class="icon-image" src="<?php echo $icon?>" />
+				
+				<p><?php echo $term->description;?></p>
+
+				<a href="<?php echo get_term_link($term)?>"> <?php echo $name ?>  Stuff</a>
+
+					<!-- echo get_term_link($term) -->
+			</div>
+				<?php endforeach;?>
+			
+			</div>
+	</section>
+
+<!-- JOURNAL ENTRIES -->
+<section>
+
+<h2>Inhabitent Journal</h2>
+
+<?php 
+$args = array(
+    'post_type'         => 'post',
+	'order'             => 'DESC',
+	'order'				=> 'date',
+	'posts_per_page'    => '3'
+);
+ $journals = get_posts($args);
+?>
+
+ <?php foreach ($journals as $post) : ?>
+                       <?php setup_postdata($post); ?>
+
+                       <div class='front-page-post-container'>
+                           <div class='front-page-post-thumbnail'>
+                               <?php the_post_thumbnail(); ?>
+                           </div>
+
+
+                           <div class='front-page-post-wrapper'>
+                               <div class='front-page-post-date'>
+                                   <?php the_date(); ?>
+                               </div>
+                               <div class='front-page-post-comment'>
+
+                                 <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?>
+                               </div>
+                           </div>
+
+                           <div class='front-page-post-title'>
+                               <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+
+                           </div>
+                           <div class='front-page-post-permalink'>
+                               <a href="<?php the_permalink() ?>" rel="bookmark">Read Entry</a>
+                           </div>
+                       </div>
+				   <?php endforeach; ?>
+</section>
+				   
 			
     </main><!-- #main -->
 </div><!-- #primary -->
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
