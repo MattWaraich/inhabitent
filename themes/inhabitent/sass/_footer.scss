@@ -1,45 +1,75 @@
-// FOOTER
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.container {
+  margin: 0 auto;
+  width: 1120px;
+}
 .site-footer {
-  background-image: url('../../images/dark-wood.png');
-  width: 100%;
-  height: auto;
+  background: url('../../images/dark-wood.png');
+  background-size: 512px 512px;
   color: white;
 
-  .contact-container {
-    // display: flex;
-    // flex-direction: column;
-    // flex-wrap: wrap;
-    @include main-center-block;
+  a {
+    color: white;
+    text-decoration: none;
 
-    .footer-logo {
-      width: 50%;
-      display: flex;
-      justify-content: flex-end;
-      img {
-        width: 50%;
-        // padding
-        height: 20%;
-      }
-    }
-
-    .contact-info {
-      width: 25%;
-    }
-    .business-hours {
-      width: 25%;
-    }
-    .copy {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .site-info {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding-top: 50px;
+    &:hover {
+      text-decoration: underline;
     }
   }
+}
+
+.footer-blocks {
+  display: flex;
+
+  h3 {
+    color: $color__orange;
+    @include font-size(1.2);
+    margin-bottom: $base__space-unit / 2;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: $base__space-unit / 3;
+  }
+  span {
+    display: inline-flex;
+  }
+
+  i {
+    @include font-size(1.25);
+    margin-right: $base__space-unit / 3;
+  }
+
+  .day-of-week {
+    font-weight: bold;
+  }
+}
+
+.footer-block-item {
+  margin: ($base__space-unit * 2) 0;
+  padding-right: $base__space-unit;
+  width: 25%;
+
+  &:last-child {
+    padding-right: 0;
+    width: 50%;
+  }
+
+  .text-logo {
+    margin-top: 1rem;
+    text-align: right;
+
+    img {
+      max-width: 50%;
+    }
+  }
+}
+
+.site-info {
+  font-family: 'Merriweather Web', sans-serif;
+  padding: $base__space-unit 0;
+  text-align: center;
+  text-transform: uppercase;
 }
