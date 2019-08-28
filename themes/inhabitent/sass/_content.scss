@@ -51,9 +51,10 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  position: fixed;
 }
 
-/*  SHOP STUFF AREA */
+/*  MAIN PAGE SHOP STUFF AREA */
 .home h2 {
   text-align: center;
   font-size: 2.4rem;
@@ -114,6 +115,8 @@
     }
   }
 }
+
+/* SHOP PAGE */
 
 /* POSTS & PAGES */
 
