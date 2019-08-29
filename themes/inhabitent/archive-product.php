@@ -6,65 +6,51 @@
  */
  
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<?php
-					//the_archive_title( '<h1 class="page-title">', '</h1>' );
-					//the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-				<!-- Products -->
-		<div class="product-content">
-			<header class="page-header">
-				<h1 class="page-title">SHOP STUFF</h2>
-				<ul class="product-type-list">
-					<li>
-						<p>
-							<a href="#">DO</a>
-						</p>
-					</li>
-					<li>
-						<p>
-							<a href="#">EAT</a>
-						</p>
-					</li>
-					<li>
-						<p>
-							<a href="#">SLEEP</a>
-						</p>
-					</li>
-					<li>
-						<p>
-							<a href="#">WEAR</a>
-						</p>
-					</li>
-			</header>
-		</div> <!-- end of product page -->
-			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+        <?php if ( have_posts() ) : ?>
+            <header class="page-header">
+                <h1> Shop stuff </h1>
+                <!-- Products -->
+                <ul class="product-taxonomies">
+                    <?php
+                        $taxonomy_list = array(
+                            'taxonomy' => 'product-type',
+                            'hide_empty' => false,
+                            'order' => 'ASC',);
+                        $terms = get_terms($taxonomy_list);
+                    ?>
+                <!-- Start loop for product type -->
+                <?php foreach ($terms as $term) : ?>
+                    <li class="product-taxonomies-list">
+                        <a href="<?= get_term_link($term); ?>">
+                            <?= strtoupper($term->name); ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+                <?php wp_reset_postdata(); ?>
+            </ul>
+            </header><!-- .page-header -->
+            <div class="product-container">
+            <?php while ( have_posts() ) : the_post(); ?>
+              <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <a class="footer-logo-link" href="<?php echo get_permalink() ?>">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <?php the_post_thumbnail( 'large' ); ?>
+                    <?php endif; ?>
+                </a>
+                <div class="text-container">
+                <?php the_title( '<span class="product-name">', '</span>' ); ?>
+                <span class="product-price"><?php echo CFS()->get('product_price'); ?></span>
+                </div>
+            </article><!-- #post-## -->
+            <?php endwhile; ?>
+                        </div>
+            <?php the_posts_navigation(); ?>
+        <?php else : ?>
+            <?php get_template_part( 'template-parts/content', 'none' ); ?>
+        <?php endif; ?>
+        </div> <!-- end of product page -->
+        </main><!-- #main -->
+    </div><!-- #primary -->
 <?php get_footer(); ?>
