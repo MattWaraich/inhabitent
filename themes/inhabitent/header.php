@@ -20,14 +20,24 @@
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
-			<header id="masthead" class="site-header" role="banner">
+			<header id="masthead" class="
+			<?php
+
+if (is_page('about') || is_page('front-page')){
+echo 'site-header';
+} else {
+echo 'reverse-header';
+}
+
+
+			?>" role="banner">
 				<!-- .site-branding -->
 				<div class="site-branding">
 
 				<!-- .site-logo -->
 				<div class="site-logo">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php echo get_template_directory_uri().'/images/logos/inhabitent-logo-tent.svg' ?>" alt="site-logo">
+						<img src="<?php echo get_template_directory_uri().'/images/logos/inhabitent-logo-tent-white.svg' ?>" alt="site-logo">
 						</a>
 					</div>
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -43,9 +53,9 @@
 				</nav>
 				<!-- #site-search -->
 				<div class="site-primary-menu">
-						
+				
 						<?php get_search_form(); ?>
-					</div>
+				</div>
 
 
 			</header><!-- #masthead -->

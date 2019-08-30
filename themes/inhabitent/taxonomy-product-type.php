@@ -10,7 +10,7 @@ get_header(); ?>
         <main id="main" class="site-main" role="main">
         <?php if ( have_posts() ) : ?>
             <header class="page-header">
-                <h1> Shop stuff </h1>
+                <h1> <?php single_term_title() ?> </h1>
 				<!-- Products -->
 				<div class="product-list">
                 <ul class="product-taxonomies">
@@ -66,4 +66,5 @@ get_header(); ?>
         </div> <!-- end of product page -->
         </main><!-- #main -->
     </div><!-- #primary -->
+    
 <?php get_footer(); ?>

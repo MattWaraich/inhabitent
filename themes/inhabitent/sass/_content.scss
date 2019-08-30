@@ -1,10 +1,8 @@
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/* Heade */
+/* Header */
 
-.reverse-header{}
-.site-header{
+.reverse-header {
+}
+.site-header {
 }
 /* Menus */
 
@@ -12,6 +10,7 @@
 .page-about {
   .site-header {
     position: absolute;
+    z-index: 99;
   }
 }
 
@@ -61,7 +60,8 @@
   // position: fixed;
 }
 
-/*  MAIN PAGE SHOP STUFF AREA */
+/*  MAIN PAGE SHOP STUFF PREVIEW */
+
 .home h2 {
   text-align: center;
   font-size: 2.4rem;
@@ -102,7 +102,122 @@
   }
 }
 
-/* JOURNAL ENTRY */
+/* SHOP STUFF PAGE */
+
+#page {
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .product-taxonomies {
+    display: flex;
+    flex-direction: row;
+    .product-taxonomies-list {
+      padding: 0 1rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.product-name {
+  // margin-top: 3.125rem;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  // margin-bottom: 50px;
+  // border-top: 1px dashed #666;
+  // border-bottom: 1px dashed #666;
+  font: $font__special;
+  h1 {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+  }
+  .product-menu {
+    display: flex;
+    justify-content: center;
+    a {
+      font-family: $font__special;
+      font-size: 1.2rem;
+      color: $color__green;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 20px 25px;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+.product-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  article {
+    width: 23%;
+    height: 330px;
+    overflow: hidden;
+    border: 1px solid $color__border-abbr;
+    img {
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .text-container {
+      border-top: 5px solid $color__border-abbr;
+      position: relative;
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      .product-name {
+        // margin-top: 16px;
+        // padding-left: 10px;
+        // width: 100%;
+        // overflow: hidden;
+        // white-space: nowrap;
+      }
+    }
+    .product-dots {
+      flex-grow: 1;
+      overflow: hidden;
+      position: relative;
+      &:before {
+        content: '..............................';
+        flex-grow: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+    }
+    .product-price {
+      // background: white;
+      // position: absolute;
+      // right: 0px;
+      // top: 16px;
+      // padding-right: 10px;
+      &:before {
+        content: '$';
+      }
+    }
+  }
+}
+.single-type {
+  text-align: center;
+}
+
+/* Single products page */
+
+/* JOURNAL HOMEPAGE ENTRY */
 
 .journal-entries {
   display: flex;
@@ -141,6 +256,8 @@
   margin-top: 50px;
 }
 
+/* FIND US */
+
 /* POSTS & PAGES */
 
 .sticky {
@@ -160,23 +277,12 @@
   display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: $base__space-unit 0 0;
-}
-
-.page-links {
-  clear: both;
-  margin: 0 0 $base__space-unit;
-}
-
 /* Links */
 nav a {
-  color: $color__text-screen;
+  color: white;
   text-decoration: none;
   &:visited {
-    color: $color__link-visited;
+    color: white;
   }
   &:hover,
   &:focus,

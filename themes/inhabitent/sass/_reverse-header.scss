@@ -1,0 +1,70 @@
+.reverse-header {
+  background-color: transparent;
+  padding: 0 $base__space-unit;
+
+  //   text-shadow: 1px 1px 2px #323232;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .site-branding {
+    flex: 20%;
+    .site-logo {
+      a {
+        img {
+          height: 18%;
+          width: 18%;
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
+  .main-navigation {
+    flex: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .menu-main-menu-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      .nav-menu {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        .menu-item {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+
+  .site-primary-menu {
+    .search-form {
+      position: relative;
+      .search-field {
+        text-indent: 10%;
+        position: relative;
+      }
+      .search-submit {
+        padding: 0;
+        border: none;
+        position: absolute;
+        background-color: transparent;
+        top: 0;
+        .icon-search {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

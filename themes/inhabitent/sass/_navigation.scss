@@ -5,10 +5,10 @@
 /* Links */
 
 a {
-  color: $color__link;
+  color: whitesmoke;
 
   &:visited {
-    color: $color__link-visited;
+    color: whitesmoke;
   }
   &:hover,
   &:focus,
@@ -28,8 +28,6 @@ a {
 
 .site-header {
   background-color: transparent;
-
-  height: 10vh;
   padding: 0 $base__space-unit;
 
   //   text-shadow: 1px 1px 2px #323232;
@@ -44,8 +42,9 @@ a {
     .site-logo {
       a {
         img {
-          height: 25%;
-          width: 25%;
+          height: 18%;
+          width: 18%;
+          padding-left: 30px;
         }
       }
     }
@@ -67,11 +66,11 @@ a {
       .nav-menu {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
-
         width: 100%;
         .menu-item {
+          padding: 0 1rem;
         }
       }
     }
@@ -140,7 +139,6 @@ ul {
   }
 }
 li {
-  float: left;
   position: relative;
 
   &:hover > a,
@@ -164,7 +162,7 @@ a {
   display: block;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 7px) {
   .menu-toggle {
     display: none;
   }

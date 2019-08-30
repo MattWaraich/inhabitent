@@ -2,16 +2,38 @@
 # Widgets
 --------------------------------------------------------------*/
 
-.widget {
-	margin: 0 0 $base__space-unit;
-
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
-	}
+.widget-area {
+  margin: 0 0 $base__space-unit * 2;
+  /* Make sure select elements fit in widgets. */
+  select {
+    max-width: 100%;
+  }
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  p {
+    margin-bottom: $base__space-unit / 3;
+  }
+  .content-area {
+    i {
+      line-height: 1.75;
+      width: 25px;
+      margin-right: $base__space-unit/3;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
 }
-
 /* Search widget. */
 .widget_search .search-submit {
-	display: none;
+  display: none;
+}
+.widget-area {
+  padding-top: $base__space-unit * 3;
+  padding-left: 5%;
+  width: 400px;
+  margin-right: auto;
 }

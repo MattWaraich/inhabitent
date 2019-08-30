@@ -11,38 +11,52 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="contact-container">
-					<div class="site-info">		
-							<div class="contact-info">
-								<h3>Contact Info</h3> <!-- span tag the social media icons -->
-								<p>
-									<i class="fa fa-envelope">
-									
-									</i>
-									<a href="mailto:mattsinghwaraich@gmail.com">mattsinghwaraich@gmail.com</a>
-								</p>
-								<p>
-									<i class="fa fa-phone">
-									
-									</i>	
-									<a href="604-652-4556">604-652-4556</a>
-								</p>
-							</div> <!-- end of contact info -->
+			<div class="footer-blocks container">
 
-							<div class="business-hours">
-								<h3>Business Hours</h3>
-								<p><b>Monday-Friday:</b> 9am-5pm</p>
-								<p><b>Saturday:</b> 10am-2pm</p>
-								<p><b>Sunday:</b> closed</p>
-							</div> <!-- end of business hours -->
+					<div class="footer-block-item">
 
-							<div class="footer-logo">
-								<img class="footer-logo-image" src="<?php echo get_template_directory_uri(); ?>/images/logos/inhabitent-logo-text.svg" alt="Inhabitent logo">							
-							</div> <!-- logo -->
+						<div class="contact">
+							<h3>Contact Info</h3>
+							<p><span><i class="fa fa-envelope"></i><a href="mailto:mattsinghwaraich@gmai;.com">mattsinghwaraich@gmail.com</a></span></p>
+							<p><span><i class="fa fa-phone"></i><a href="tel:604-652-4556">604-652-4556</a></span></p>
 
-							<div class="copy">
-								<p>COPYRIGHT © 2019 INHABITENT</p>
-							</div>
+							<p>
+								<span><i class="fab fa-facebook-square"></i></span>
+
+								<span><i class="fab fa-twitter-square"></i></span>
+
+								<span><i class="fab fa-google-plus-square"></i></span>
+							</p>
+						</div>
+					</div>
+
+					<div class="footer-block-item">
+						<div class="business-hours">
+							<h3>Business Hours</h3>
+							<p><span class="day-of-week">Monday-Friday:</span> 9am to 5pm</p>
+
+							<p><span class="day-of-week">Saturday:</span> 10am to 2pm</p>
+
+							<p><span class="day-of-week">Sunday:</span> Closed</p>
+
+						</div>
+					</div>
+
+					<div class="footer-block-item">
+						<div class="text-logo">
+							<a href="https://tent.academy.red/" rel="home">
+
+								<img src="https://tent.academy.red/wp-content/themes/inhabitent/images/inhabitent-logo-text.svg" alt="Inhabitent logo">
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="site-info">
+					<div class="container">
+						Copyright © 2019 Inhabitent</div>
+				</div>
 						<div> <!-- end of site info -->
 					</div> <!-- end of contact container -->
 

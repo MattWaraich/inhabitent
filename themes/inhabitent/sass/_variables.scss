@@ -10,17 +10,23 @@ $color__text-main: #404040;
 $color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
 
+$color__green: #248a83;
+$color__purple: #2f1339;
+$color__yellow: #f0e4d1;
+$color__orange: #d99054;
+
 $color__background-hr: #ccc;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
-$color__border-abbr: #666;
+$color__border-abbr: #e1e1e1;
 
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: $color__green;
+$color__link-visited: #248a83;
+$color__link-hover: $color__purple;
 
 // Typography
 
+$font__special: Merriweather Web, serif;
 $font__main: sans-serif;
 $font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 $font__pre: 'Courier 10 Pitch', Courier, monospace;
