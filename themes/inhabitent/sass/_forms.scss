@@ -44,6 +44,7 @@ input[type='url'],
 input[type='password'],
 input[type='search'] {
   padding: 3px;
+  color: grey;
 }
 textarea {
   padding-left: 3px;
@@ -69,7 +70,7 @@ textarea {
           }
         }
         &-field {
-          width: 0;
+          background: transparent;
           padding: 0;
           text-transform: inherit;
           font-family: inherit;

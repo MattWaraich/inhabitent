@@ -390,8 +390,8 @@ input[type='submit'] {
   input[type='submit']:hover,
   input[type='submit']:active,
   input[type='submit']:focus {
-    background-color: #21759b;
-    border-color: #21759b;
+    background-color: transparent;
+    border-color: transparent;
     color: white; }
 
 /* Fields */
@@ -417,7 +417,8 @@ input[type='email'],
 input[type='url'],
 input[type='password'],
 input[type='search'] {
-  padding: 3px; }
+  padding: 3px;
+  color: grey; }
 
 textarea {
   padding-left: 3px;
@@ -427,14 +428,14 @@ textarea {
   cursor: pointer;
   padding: 0;
   border: 0 solid transparent;
-  color: #21759b; }
+  color: transparent; }
   .search-form label .search-submit:hover, .search-form label .search-submit:active, .search-form label .search-submit:focus {
     background-color: transparent;
     border-color: none;
     color: #2f1339; }
 
 .search-form label .search-field {
-  width: 0;
+  background: transparent;
   padding: 0;
   text-transform: inherit;
   font-family: inherit;
@@ -449,6 +450,7 @@ textarea {
 .reverse-header {
   background-color: transparent;
   padding: 0 1.5rem;
+  color: teal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,6 +464,9 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .reverse-header nav a,
+  .reverse-header nav a:visited {
+    color: teal; }
   .reverse-header .site-branding {
     -webkit-box-flex: 20%;
         -ms-flex: 20%;
@@ -521,7 +526,14 @@ textarea {
         .reverse-header .main-navigation .menu-main-menu-container .nav-menu .menu-item {
           padding: 0 1rem; }
   .reverse-header .site-primary-menu .search-form {
-    position: relative; }
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
     .reverse-header .site-primary-menu .search-form .search-field {
       text-indent: 10%;
       position: relative; }
@@ -625,10 +637,16 @@ a {
         .site-header .main-navigation .menu-main-menu-container .nav-menu .menu-item {
           padding: 0 1rem; }
   .site-header .site-primary-menu .search-form {
-    position: relative; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: white;
+    position: relative;
+    border: none; }
     .site-header .site-primary-menu .search-form .search-field {
       text-indent: 10%;
-      position: relative; }
+      position: relative;
+      border: none; }
     .site-header .site-primary-menu .search-form .search-submit {
       padding: 0;
       border: none;
@@ -711,7 +729,7 @@ a {
     -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
             box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #21759b;
+    color: transparent;
     display: block;
     font-weight: bold;
     height: auto;
@@ -764,11 +782,14 @@ a {
     margin-left: 0;
     padding-left: 0; }
   .widget-area p {
-    margin-bottom: 0.5rem; }
-  .widget-area .content-area i {
-    line-height: 1.75;
-    width: 25px;
-    margin-right: 0.5rem; }
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
   .widget-area .content-area a {
     text-decoration: none; }
 
@@ -781,6 +802,11 @@ a {
   padding-left: 5%;
   width: 400px;
   margin-right: auto; }
+
+i {
+  line-height: 1.75;
+  width: 25px;
+  margin-right: 0.5rem; }
 
 /* Header */
 /* Menus */
@@ -816,6 +842,33 @@ a {
       display: block;
       width: auto;
       height: 100%; }
+
+.header-search-bar {
+  line-height: 1;
+  padding-left: 1.5rem; }
+  .header-search-bar .search-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: purple; }
+    .header-search-bar .search-form .search-field {
+      border: 0;
+      padding: 0;
+      width: 200px;
+      background: transparent;
+      font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+      margin-left: 0.75rem;
+      padding: 0 0.3rem;
+      text-transform: uppercase;
+      color: black; }
+    .header-search-bar .search-form .search-submit {
+      background-color: transparent;
+      padding: 0; }
+      .header-search-bar .search-form .search-submit span {
+        color: green; }
 
 /* HERO BANNER */
 .home-hero {
@@ -994,7 +1047,6 @@ a {
 .single-type {
   text-align: center; }
 
-/* Single products page */
 /* JOURNAL HOMEPAGE ENTRY */
 .journal-entries {
   display: -webkit-box;
@@ -1182,6 +1234,11 @@ nav a {
 
 .bypostauthor {
   display: block; }
+
+/*  LABEL FOR SEARCH FORM */
+.search-label {
+  display: block;
+  overflow: hidden; }
 
 .single .site,
 .page .site,

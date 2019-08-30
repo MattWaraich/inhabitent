@@ -28,6 +28,7 @@
     height: 1px;
     content: '';
   }
+
 }
 .main-navigation {
   header & {
@@ -46,6 +47,39 @@
         display: block;
         width: auto;
         height: 100%;
+      }
+    }
+  }
+}
+
+.header-search-bar {
+  line-height: 1;
+  padding-left: 1.5rem;
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    color: purple;
+
+    .search-field {
+      border: 0;
+      padding: 0;
+      width: 200px;
+      background: transparent;
+      font-family: $font__code;
+      margin-left: 0.75rem;
+      padding: 0 0.3rem;
+      text-transform: uppercase;
+      color: black;
+    }
+
+    .search-submit {
+      background-color: transparent;
+      padding: 0;
+      span {
+        color: green;
+        i {
+        }
       }
     }
   }
@@ -218,8 +252,6 @@
 .single-type {
   text-align: center;
 }
-
-/* Single products page */
 
 /* JOURNAL HOMEPAGE ENTRY */
 
@@ -433,4 +465,10 @@ nav a {
 }
 .bypostauthor {
   display: block;
+}
+
+/*  LABEL FOR SEARCH FORM */
+.search-label {
+  display: block;
+  overflow: hidden;
 }

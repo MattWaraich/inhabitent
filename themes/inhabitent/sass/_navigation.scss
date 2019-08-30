@@ -78,10 +78,14 @@ a {
 
   .site-primary-menu {
     .search-form {
+      display: flex;
+      color: white;
       position: relative;
+      border: none;
       .search-field {
         text-indent: 10%;
         position: relative;
+        border: none;
       }
       .search-submit {
         padding: 0;

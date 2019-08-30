@@ -50,7 +50,7 @@ echo 'reverse-header';
 							'theme_location' => 'primary', 
 							'menu_id' => 'primary-menu',
 						) ); ?>
-				</nav>
+				</nav> 
 				<!-- #site-search -->
 				<div class="site-primary-menu">
 				

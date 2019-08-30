@@ -15,13 +15,12 @@
   }
   p {
     margin-bottom: $base__space-unit / 3;
+    display: flex;
+    flex-direction: row;
+    
   }
   .content-area {
-    i {
-      line-height: 1.75;
-      width: 25px;
-      margin-right: $base__space-unit/3;
-    }
+    
     a {
       text-decoration: none;
     }
@@ -36,4 +35,11 @@
   padding-left: 5%;
   width: 400px;
   margin-right: auto;
+}
+
+i {
+  line-height: 1.75;
+  width: 25px;
+  margin-right: $base__space-unit/3;
+  
 }
