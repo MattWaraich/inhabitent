@@ -14,6 +14,10 @@
   }
 }
 
+#primary {
+  max-width: 100%;
+}
+
 .site-header {
   width: 100%;
   &:after {
@@ -220,12 +224,6 @@
 /* JOURNAL HOMEPAGE ENTRY */
 
 .journal-entries {
-  // margin: auto;
-  // width: 100%;
-  // height: auto;
-  // display: grid;
-  // grid-gap: 33px;
-  // grid-template-columns: repeat(3, 1fr);
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -258,7 +256,7 @@ div .latest-adventure {
   grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  .entry-title{
+  .entry-title {
     color: white;
   }
   article {

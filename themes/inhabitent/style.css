@@ -375,9 +375,9 @@ input[type='reset'],
 input[type='submit'] {
   cursor: pointer;
   border: 1px solid black;
-  color: black;
+  color: white;
   padding: 0.75rem 1.5rem;
-  background-color: white;
+  background-color: teal;
   font-size: 1rem;
   text-transform: uppercase; }
   button:hover, button:active, button:focus,
@@ -789,6 +789,9 @@ a {
   position: absolute;
   z-index: 99; }
 
+#primary {
+  max-width: 100%; }
+
 .site-header {
   width: 100%; }
   .site-header:after {
@@ -1184,23 +1187,43 @@ nav a {
 .page .site,
 .blog .site {
   display: grid;
-  grid-template-areas: 'header header' 'main aside';
-  grid-template-columns: 65%, 35%; }
+  grid-template-areas: 'header header' 'main main' 'footer footer';
+  grid-template-columns: 65% 35%; }
   .single .site header,
   .page .site header,
   .blog .site header {
     grid-area: header; }
-  .single .site .content-area,
-  .page .site .content-area,
-  .blog .site .content-area {
+  .single .site .site-content,
+  .page .site .site-content,
+  .blog .site .site-content {
+    margin: auto;
     grid-area: main;
-    border-top: 1px solid #404040; }
+    border-top: 1px solid #404040;
+    max-width: 1240px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .single .site .site-content .content-area,
+    .page .site .site-content .content-area,
+    .blog .site .site-content .content-area {
+      width: 75%;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .single .site .site-content .widget-area,
+    .page .site .site-content .widget-area,
+    .blog .site .site-content .widget-area {
+      width: 25%; }
   .single .site .widget-area,
   .page .site .widget-area,
   .blog .site .widget-area {
     border-top: 1px solid #404040;
     grid-area: aside;
     border-left: 1px solid #404040; }
+  .single .site .site-footer,
+  .page .site .site-footer,
+  .blog .site .site-footer {
+    grid-area: footer; }
 
 .single .entry-header,
 .page .entry-header,
@@ -1210,7 +1233,11 @@ nav a {
   .page .entry-header img,
   .blog .entry-header img {
     width: 100%;
-    height: auto; }
+    height: auto;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 5%; }
   .single .entry-header .entry-title,
   .page .entry-header .entry-title,
   .blog .entry-header .entry-title {
@@ -1221,7 +1248,7 @@ nav a {
     left: 0;
     padding: 0.75rem 1.5rem;
     position: absolute;
-    margin-top: 2.25rem;
+    margin-top: 5rem;
     max-width: 75%;
     top: 0; }
   .single .entry-header .entry-meta,
@@ -1237,7 +1264,9 @@ nav a {
     color: #fff;
     font-family: Novecento Sans Web, sans-serif;
     right: 0;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: -31px;
+    margin-right: 47px; }
 
 .home .site,
 .page-about .site {
@@ -1246,6 +1275,24 @@ nav a {
 
 .entry-title {
   background: none; }
+
+.page-about .site .site-content,
+.home .site .site-content {
+  max-width: unset;
+  margin: unset; }
+
+.page-about .hero-image-header {
+  position: relative; }
+  .page-about .hero-image-header .entry-title {
+    background: none;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
+.blog .entry-header a,
+.blog .entry-header a:visited {
+  color: #fff; }
 
 /*--------------------------------------------------------------
 # Media
@@ -1433,23 +1480,43 @@ object {
 .page .site,
 .blog .site {
   display: grid;
-  grid-template-areas: 'header header' 'main aside';
-  grid-template-columns: 65%, 35%; }
+  grid-template-areas: 'header header' 'main main' 'footer footer';
+  grid-template-columns: 65% 35%; }
   .single .site header,
   .page .site header,
   .blog .site header {
     grid-area: header; }
-  .single .site .content-area,
-  .page .site .content-area,
-  .blog .site .content-area {
+  .single .site .site-content,
+  .page .site .site-content,
+  .blog .site .site-content {
+    margin: auto;
     grid-area: main;
-    border-top: 1px solid #404040; }
+    border-top: 1px solid #404040;
+    max-width: 1240px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .single .site .site-content .content-area,
+    .page .site .site-content .content-area,
+    .blog .site .site-content .content-area {
+      width: 75%;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .single .site .site-content .widget-area,
+    .page .site .site-content .widget-area,
+    .blog .site .site-content .widget-area {
+      width: 25%; }
   .single .site .widget-area,
   .page .site .widget-area,
   .blog .site .widget-area {
     border-top: 1px solid #404040;
     grid-area: aside;
     border-left: 1px solid #404040; }
+  .single .site .site-footer,
+  .page .site .site-footer,
+  .blog .site .site-footer {
+    grid-area: footer; }
 
 .single .entry-header,
 .page .entry-header,
@@ -1459,7 +1526,11 @@ object {
   .page .entry-header img,
   .blog .entry-header img {
     width: 100%;
-    height: auto; }
+    height: auto;
+    border-right: 1px solid #e1e1e1;
+    padding-right: 5%;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 5%; }
   .single .entry-header .entry-title,
   .page .entry-header .entry-title,
   .blog .entry-header .entry-title {
@@ -1470,7 +1541,7 @@ object {
     left: 0;
     padding: 0.75rem 1.5rem;
     position: absolute;
-    margin-top: 2.25rem;
+    margin-top: 5rem;
     max-width: 75%;
     top: 0; }
   .single .entry-header .entry-meta,
@@ -1486,7 +1557,9 @@ object {
     color: #fff;
     font-family: Novecento Sans Web, sans-serif;
     right: 0;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: -31px;
+    margin-right: 47px; }
 
 .home .site,
 .page-about .site {
@@ -1495,3 +1568,21 @@ object {
 
 .entry-title {
   background: none; }
+
+.page-about .site .site-content,
+.home .site .site-content {
+  max-width: unset;
+  margin: unset; }
+
+.page-about .hero-image-header {
+  position: relative; }
+  .page-about .hero-image-header .entry-title {
+    background: none;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
+.blog .entry-header a,
+.blog .entry-header a:visited {
+  color: #fff; }

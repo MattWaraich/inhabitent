@@ -11,7 +11,7 @@
 			</div><!-- #content -->
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="footer-blocks container">
+				<div class="footer-blocks container">
 
 					<div class="footer-block-item">
 
