@@ -103,6 +103,43 @@ $args = array(
 				<?php endforeach; ?>
 </div>
 </section>
+
+
+<h2 class="heading-adventure">Latest Adventures</h2>
+            <div class="latest-adventure">
+
+                <article id="adventure-1" class="first-adventure">
+                    <img src="<?php echo get_template_directory_uri();?>/images/adventure-photos/canoe-girl.jpg">  
+                    <div class="adventure-title-button">
+                        <h3 class="entry-title">Getting Back to Nature in a Canoe</h3> <input type="button" value="READ MORE" class="homebutton" id="go-to-post" />
+            </div><!-- .entry-button -->
+				</article><!-- #post-## -->
+				
+                <article id="adventure-2" class="second-adventure">
+				<img src="<?php echo get_template_directory_uri();?>/images/adventure-photos/beach-bonfire.jpg">  
+                    <div class="adventure-title-button">
+                        <h3 class="entry-title">A Night with Friends at the Beach</h3> <input type="button" value="READ MORE" class="homebutton" id="go-to-post" />
+                    </div><!-- .entry-button -->
+				</article><!-- #post-## -->
+				
+                <article id="adventure-3" class="third-adventure">
+				<img src="<?php echo get_template_directory_uri();?>/images/adventure-photos/mountain-hikers.jpg">  
+                    <div class="adventure-title-button">
+                        <h3 class="entry-title">Taking in the View at Big Mountain</h3> <input type="button" value="READ MORE" class="homebutton" id="go-to-post" />
+                    </div><!-- .entry-button -->
+				</article><!-- #post-## -->
+				
+                <article id="adventure-4" class="fourth-adventure">
+				<img src="<?php echo get_template_directory_uri();?>/images/adventure-photos/night-sky.jpg">  
+                    <div class="adventure-title-button">
+                        <h3 class="entry-title">Star-Gazing at the Night Sky</h3> <input type="button" value="READ MORE" class="homebutton" id="go-to-post" />
+                    </div><!-- .entry-button -->
+                </article><!-- #post-## -->
+			</div>
+			
+            <div class="button-more-adventure">
+                <input type="button" value="More Adventures" onClick="document.location.href='//localhost:3000/inhabitent/adventure/'" />
+            </div><!-- .entry-button -->
 				   
 			
     </main><!-- #main -->
