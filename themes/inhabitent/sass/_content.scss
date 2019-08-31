@@ -134,10 +134,15 @@
     p {
       text-align: center;
     }
-    .product-taxonomies-list .button {
-      border: 1px solid black;
-    }
   }
+}
+.blk-button {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  background: teal;
+  color: white;
+  font-family: Novecento Sans Web, sans-serif;
+  text-transform: uppercase;
 }
 
 /* SHOP STUFF PAGE */

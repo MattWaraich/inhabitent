@@ -47,7 +47,7 @@ $args = array(
 				
 				<p><?php echo $term->description;?></p>
 
-				<a href="<?php echo get_term_link($term)?>"> <?php echo $name ?>  Stuff</a>
+				<a class="blk-button" href="<?php echo get_term_link($term)?>"> <?php echo $name ?>  Stuff</a>
 
 					<!-- echo get_term_link($term) -->
 			</div>

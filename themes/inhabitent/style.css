@@ -551,7 +551,7 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: teal; }
+  color: black; }
   a:hover, a:focus, a:active {
     color: #2f1339; }
   a:focus {
@@ -931,8 +931,14 @@ i {
       width: 25%; }
     .product-type-blocks .product-each p {
       text-align: center; }
-    .product-type-blocks .product-each .product-taxonomies-list .button {
-      border: 1px solid black; }
+
+.blk-button {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  background: teal;
+  color: white;
+  font-family: Novecento Sans Web, sans-serif;
+  text-transform: uppercase; }
 
 /* SHOP STUFF PAGE */
 #page {

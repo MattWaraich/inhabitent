@@ -24,7 +24,7 @@ get_header(); ?>
                 	<!-- Start loop for product type -->
                 	<?php foreach ($terms as $term) : ?>
                     <li class="product-taxonomies-list">
-                        <a class="button" href="<?= get_term_link($term); ?>">
+                        <a href="<?= get_term_link($term); ?>">
                             <?= strtoupper($term->name); ?>
                         </a>
                     </li>
