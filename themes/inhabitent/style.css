@@ -552,8 +552,6 @@ textarea {
 /* Links */
 a {
   color: teal; }
-  a:visited {
-    color: whitesmoke; }
   a:hover, a:focus, a:active {
     color: #2f1339; }
   a:focus {
@@ -703,13 +701,11 @@ a {
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-  float: left;
   width: 50%; }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-  float: right;
   text-align: right;
   width: 50%; }
 
@@ -935,6 +931,8 @@ i {
       width: 25%; }
     .product-type-blocks .product-each p {
       text-align: center; }
+    .product-type-blocks .product-each .product-taxonomies-list .button {
+      border: 1px solid black; }
 
 /* SHOP STUFF PAGE */
 #page {
@@ -1052,13 +1050,13 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
   -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
           justify-content: space-between;
-  list-style-type: none;
   margin-bottom: 0;
   margin-left: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  border: 1px solid #e1e1e1; }
   .journal-entries .front-page-post-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1070,11 +1068,17 @@ i {
     margin: 0 auto;
     padding: 0.75rem;
     border-top-width: 5px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .journal-entries .front-page-post-container .button {
+      border: 1px solid black;
+      padding: 5px 10px 5px 10px; }
+    .journal-entries .front-page-post-container .front-page-post-title a:visited {
+      color: #248a83; }
     .journal-entries .front-page-post-container .front-page-post-thumbnail img {
-      width: 100px; }
+      height: 300px;
+      width: 400px; }
 
 /* ADVENTURE SECTION */
 div .latest-adventure {

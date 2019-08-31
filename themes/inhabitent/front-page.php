@@ -61,6 +61,7 @@ $args = array(
 
 <h2>Inhabitent Journal</h2>
 
+<ul>
 <?php 
 $args = array(
     'post_type'         => 'post',
@@ -75,33 +76,28 @@ $args = array(
 
 	<?php foreach ($journals as $post) : ?>
                        <?php setup_postdata($post); ?>
-
+                    
                        <div class='front-page-post-container'>
                            <div class='front-page-post-thumbnail'>
-                               <?php the_post_thumbnail('array(100)'); ?>
+                               <?php the_post_thumbnail(); ?>
                            </div>
-
-
+                    
                            <div class='front-page-post-wrapper'>
                                <div class='front-page-post-date'>
-                                   <?php the_date(); ?>
-                               </div>
-                               <div class='front-page-post-comment'>
-
-                                 <?php comments_number('0 Comments', '1 Comment', '% Comments'); ?>
+                                   <?php the_date() ?> / <?php comments_number('0 Comments', '1 Comment', '% Comments');?>
                                </div>
                            </div>
-
+                    
                            <div class='front-page-post-title'>
                                <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
-
                            </div>
                            <div class='front-page-post-permalink'>
-                               <a href="<?php the_permalink() ?>" rel="bookmark">Read Entry</a>
+                               <a class="button" href="<?php the_permalink() ?>" rel="bookmark">Read Entry</a>
                            </div>
                        </div>
-				<?php endforeach; ?>
-</div>
+                            <?php endforeach; ?>
+                    
+            </div>
 </section>
 
 
