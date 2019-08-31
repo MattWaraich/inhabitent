@@ -1322,12 +1322,10 @@ nav a {
   .page .entry-header .entry-meta,
   .blog .entry-header .entry-meta {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-bottom: -100px;
+    display: inline-block;
+    padding: 1.00005rem 1.5rem;
     background-color: teal;
-    bottom: 0;
+    padding: 0;
     color: #fff;
     font-family: Novecento Sans Web, sans-serif;
     right: 0;
@@ -1615,12 +1613,10 @@ object {
   .page .entry-header .entry-meta,
   .blog .entry-header .entry-meta {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-bottom: -100px;
+    display: inline-block;
+    padding: 1.00005rem 1.5rem;
     background-color: teal;
-    bottom: 0;
+    padding: 0;
     color: #fff;
     font-family: Novecento Sans Web, sans-serif;
     right: 0;
