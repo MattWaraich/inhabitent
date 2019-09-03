@@ -50,7 +50,7 @@ The HEX code for the black heading text colour is #000000
 
 ## TECHNOLOGIES USED & INSTALLATION INSTRUCTIONS
 
-PHP
+HTML/PHP
 
 CSS/SASS
 
@@ -60,16 +60,15 @@ WordPress
 
 JQuery
 
-### JQuery 
+### JQuery
 
-Wraps jQuery code in document-ready 
+Wraps jQuery code in document-ready
 
 Uses variables to store references to DOM elements wrapped in the jQuery object that are accessed more than once
 
 Use of event listeners with jQuery and respond to events appropriately in callbacks
 
 Uses jQuery to selectively add/remove or show/hide DOM elements
-
 
 ### PHP
 
@@ -127,7 +126,7 @@ Use of custom taxonomies for additional metadata where required (using a functio
 
 Use of custom fields for additional metadata where required (using the Custom Field Suite plugin)
 
-Use √ Gutenberg blocks to support content layout for all post types
+Use of Gutenberg blocks to support content layout for all post types
 
 Included a widgetized area in the sidebar
 
@@ -135,7 +134,7 @@ Enqueued CSS and JS files properly in the theme’s functions.php file
 
 Leveraged the WP template hierarchy to generate all required templates for the website
 
-Wrapped jQuery code in an IIFE to make $ available in no-conflict mode
+Wrapped jQuery code in an IIFE to make \$ available in no-conflict mode
 
 Validated theme files with Theme Check
 
@@ -179,7 +178,6 @@ Importance of Git and making commits
 
 ## STRETCH GOALS
 
-Reverse header 
+Reverse header
 
 Adventure section linking to own distinctive pages (coming soon)
-
