@@ -213,3 +213,10 @@ td,
 th {
 	padding: 0;
 }
+
+.cat-links
+.tags-links {
+	display: flex;
+flex-direction: row;
+align-content: flex-start;
+}
